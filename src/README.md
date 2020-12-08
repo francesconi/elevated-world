@@ -1,6 +1,6 @@
 # Elevated World
 
-This sample is inspired from [Reinventing the Reader monad](https://fsharpforfunandprofit.com/posts/elevated-world-6).
+This sample is inspired from [Reinventing the Reader monad](https://fsharpforfunandprofit.com/posts/elevated-world-6) and a similar MSSQL implementation written by @toburger.
 
 ## Using The SQL Analyzer (VS Code)
 
