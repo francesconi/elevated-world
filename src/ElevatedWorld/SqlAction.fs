@@ -5,6 +5,15 @@ module SqlAction =
 
     let run ctx (SqlAction action) = action ctx
 
+    let map f action =
+        let newAction ctx =
+            async {
+                let! x = run ctx action
+                return Result.bind (Ok << f) x
+            }
+
+        SqlAction newAction
+
     let retn x = SqlAction(fun _ -> async.Return x)
 
     let ok x = SqlAction(fun _ -> async.Return(Ok x))
